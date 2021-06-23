@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:getx/binding%20/second_binding.dart';
 import 'package:getx/controller%20/home_controller.dart';
 import 'package:getx/ui/home/second.dart';
 
@@ -23,7 +24,7 @@ class HomeScreen extends StatelessWidget {
             ElevatedButton(
               child: Text('Next Route'),
               onPressed: () {
-                Get.to(() => Second());
+                Get.to(() => Second(), binding: SecondBinding());
               },
             ),
             GetBuilder<HomeController>(builder: (_) {

@@ -30,6 +30,7 @@ class SecondController extends GetxController {
 
   void updateInteger() {
     integer = 10;
+    debugPrint('on click of update integer');
     update();
   }
 }

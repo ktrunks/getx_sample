@@ -4,8 +4,8 @@ import 'package:getx/controller%20/home_controller.dart';
 import 'package:getx/controller%20/second_controller.dart';
 
 class Second extends StatelessWidget {
-  final HomeController ctrl = Get.find();
-  final controller = Get.put(SecondController());
+  HomeController ctrl = Get.find();
+  SecondController controller = Get.find();
 
   @override
   Widget build(context) {
@@ -19,7 +19,7 @@ class Second extends StatelessWidget {
           const SizedBox(
             height: 10,
           ),
-          GetBuilder<HomeController>(builder: (_) {
+          GetBuilder<SecondController>(builder: (_) {
             debugPrint('build of data  $_');
             return Text(
               'data : ${controller.data}',
@@ -31,7 +31,7 @@ class Second extends StatelessWidget {
               controller.updateString();
             },
           ),
-          GetBuilder<HomeController>(builder: (_) {
+          GetBuilder<SecondController>(builder: (_) {
             debugPrint('build of integer data  $_');
             return Text(
               'integer : ${controller.integer}',
