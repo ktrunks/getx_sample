@@ -19,11 +19,16 @@ class HomeScreen extends StatelessWidget {
                 'clicks: ${controller.count}',
               );
             }),
+            const SizedBox(
+              height: 10,
+            ),
+            Obx(() => Text('Obx: ${controller.integerData}')),
             ElevatedButton(
               child: Text('Next Route'),
               onPressed: () {
                 // Get.to(() => Second(), binding: SecondBinding());
-                Get.toNamed('/second_screen');
+                /*Get.toNamed('/second_screen');*/
+                controller.updateInteger();
               },
             ),
             GetBuilder<HomeController>(builder: (_) {
